@@ -12,24 +12,36 @@ var bracket = function (str){
 			break;
 		case ")":
 			obj.paren -= 1;
+			if(obj.paren<0){
+				return false;
+			}
 			break;
 		case "{":
-			obj.brack += 1
+			obj.brack += 1;
 			break;
 		case "}":
 			obj.brack -= 1;
+			if(obj.brack<0){
+				return false;
+			}
 			break;
 		case "[":
 			obj.square += 1;
 			break;
 		case "]":
 			obj.square -= 1;
+			if(obj.square<0){
+				return false;
+			}
 			break;
 		case "<":
 			obj.alli += 1;
 			break;
 		case ">":
 			obj.alli -= 1;
+			if(obj.alli<0){
+				return false;
+			}
 		}
 	}
 	for(var key in obj){
@@ -38,7 +50,7 @@ var bracket = function (str){
 		}
 	}
 	return true;
-}
+};
 
 //Make a function that checks to see if in a string all of the opening parentheses/brackets/etc.. have their matching
 //closing pair
