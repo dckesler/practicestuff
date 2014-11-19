@@ -6,8 +6,8 @@ function delegate (child) {
         return mathObj[key].apply(mathObj, arguments);
       }
     }
-  }
-};
+  };
+}
  
 // DON'T TOUCH ANY CODE BELOW THIS
 var obj = {
