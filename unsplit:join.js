@@ -1,5 +1,5 @@
 Array.prototype.unsplit = function(a){
-	var str = ""
+	var str = "";
 	for(var i = 0; i<this.length; i++){
 		str += arr[i];
 		if(!a && a!==""){
@@ -10,6 +10,6 @@ Array.prototype.unsplit = function(a){
 		}
 	}
 	return str;
-}
+};
 
 //Create your own join() function;
